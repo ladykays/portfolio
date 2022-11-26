@@ -5,22 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
+  <title>Ndidiamaka Siokwu - Front-End Web Developer</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- main logo -->
+  <header class="">
+   
+    <h1 class="">Ndidiamaka Siokwu</h1>
+    
   </header>
 
   <!-- hero banner -->
   <section class="hero-banner">
     <div>
-      <h2>Cool subtitle here!</h2>
+      <h2>Front-End Web Developer</h2>
     </div>
   </section>
 
@@ -28,18 +36,78 @@
     <!-- about me -->
     <section class="page-section" id="about">
       <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet 
+        sit amet cursus sit amet dictum sit. Arcu vitae elementum curabitur 
+        vitae nunc sed velit dignissim sodales. Sodales neque sodales ut 
+        etiam sit amet nisl purus in. Tempor orci dapibus ultrices in iaculis 
+        nunc sed augue. Sit amet consectetur adipiscing elit. Turpis nunc 
+        eget lorem dolor sed viverra ipsum nunc. Facilisis volutpat est velit 
+        egestas dui id. Ultrices eros in cursus turpis massa tincidunt dui ut 
+        ornare. 
+      </p>
     </section>
 
     <!-- portfolio container -->
-    <section class="page-section" id="work">
+    <section class="workPortfolio" id="work">
       <h2>Work</h2>
+      <div class="portfolio-projects" id="projects"> <!-- css grid container -->
+        <div class="firstRow wrapper"> <!-- flexbox container -->
+          <div id="project1" class="portfolio-item"> <!-- flex item 1 -->
+
+          </div>
+          <div id="project2" class="portfolio-item"> <!-- flex item 2 -->
+
+          </div>
+          <div id="project3" class="portfolio-item"> <!-- flex item 3 -->
+
+          </div>
+        </div>
+        <div class="secondRow wrapper"> <!-- flexbox container -->
+          <div id="project4" class="portfolio-item"> <!-- flex item 1 -->
+
+          </div>
+          <div id="project5" class="portfolio-item"> <!-- flex item 2 -->
+
+          </div>
+          <div id="project6" class="portfolio-item"> <!-- flex item 3 -->
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- contact -->
     <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+      <h2>Get in Touch</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Laoreet sit amet cursus sit amet dictum sit. Arcu vitae elementum 
+        curabitur vitae nunc sed velit dignissim sodales. Sodales neque 
+        sodales ut etiam sit amet nisl purus in.
+      </p>
+      <!-- contact form -->
+      <form>
+        <label for="fname">First Name: </label>
+          <input type="text" id="fname" class="contact-form-field">
+          <label for="lname">Last Name: </label>
+          <input type="text" id="lname" class="contact-form-field">
+          <label for="email">Email: </label>
+          <input type="email" id="email" class="contact-form-field">
+          <label for="tel">Telephone: </label>
+          <input type="tel" id="tel" class="contact-form-field">
+          <input type="submit" value="Send" class="send-button">
+      </form>
     </section>
   </main>
 </body>
+
+<footer>
+        <p>
+            &copy; Ndidiamaka Siokwu 2022
+        </p>
+</footer>
 
 </html>
