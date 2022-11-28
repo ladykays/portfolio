@@ -23,3 +23,56 @@ h6 {
 p {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* global styles */
+:root {
+  --darkblue: #002080;
+  --cornflowerblue: #6495ed;
+}
+
+/* header section */
+header, footer {
+  width: 100%;
+}
+.headerContainer{
+  height: 8rem;
+  background-color: var(--darkblue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+h1#logo {
+ margin: auto 0;
+ background-color: var(--cornflowerblue);
+ padding: 0 1rem 0 5rem;
+ font-size: 45px;
+ color: #011759;
+}
+#menu {
+  margin: auto 0;
+  padding: 0 5rem 0 1rem;
+}
+.nav-link {
+  color: var(--cornflowerblue);
+  font-size: 24px;
+  padding: 1rem;
+  text-decoration: underline;
+}
+.nav-link:hover {
+  color: rgb(100, 148, 237, 0.6);
+}
+
+
+
+
+
