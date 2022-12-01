@@ -9,6 +9,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: #d1d3d5;
 }
 
 h1,
@@ -31,10 +32,11 @@ a {
 /* global styles */
 :root {
   --darkblue: #002080;
+  --darkbluevariant: #011759;
   --cornflowerblue: #6495ed;
 }
 
-/* header section */
+/* header section style*/
 header, footer {
   width: 100%;
 }
@@ -55,8 +57,8 @@ h1#logo {
  margin: auto 0;
  background-color: var(--cornflowerblue);
  padding: 0 1rem 0 5rem;
- font-size: 45px;
- color: #011759;
+ font-size: 3rem;
+ color: var(--darkbluevariant);
 }
 #menu {
   margin: auto 0;
@@ -72,7 +74,102 @@ h1#logo {
   color: rgb(100, 148, 237, 0.6);
 }
 
+/* hero banner style*/
+.hero-banner {
+  width: 100%;
+  height: 12rem;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/02-hero-bg.jpg);
+}
+.hero-banner-overlay {  /* adds a transparent overlay to the background image */
+  width: 100%;
+  height: 12rem;
+  background-color: rgb(100, 149, 237, 0.4);
+  display: flex;
+  justify-content: flex-end; /* aligns the h2 text to the top right */
+  align-items: flex-end;  /* aligns the h2 text to the bottom right */
 
+}
+h2#subtitle {
+  margin: 0 5rem 1rem 0;
+  padding: 0.5rem;
+  color: var(--darkblue);
+  font-size: 1.5rem;
+  background-color: var(--cornflowerblue);
+}
 
+/* main section style*/
+.page-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #d1d3d5;
+  margin: 2rem 0 2rem 0;
+  /*margin: 0 auto;*/
+  /*display: grid;
+  /*justify-content: center;*/
+  /*grid-template-rows: 1fr 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  /*grid-template-areas: "aboutTitle content content"
+    "workTitle project project";*/
+}
+.page-section, .workPortfolio {
+  width: 80%;
+  height:auto;
+  display: grid;
+  /*grid-template-rows: 1fr 1fr 1fr;*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "aboutTitle content content content content"
+                       "workTitle projects projects projects projects"
+                        "contactTitle contactContent contactContent contactForm contactForm";
+  justify-items: end;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 3rem 0rem 3rem 0rem;
 
+}
+#aboutTitle, #workTitle, #contactTitle {
+  padding-right: 0.5rem;
+}
+#aboutTitle {
+  grid-area: aboutTitle;
+}
+#content {
+  grid-area: content;
+  padding-left: 2rem;
+  align-items: center;
+}
+#workTitle {
+  grid-area: workTitle;  
+}
+#projects {
+  grid-area: projects;
+  padding-left: 2rem;
+}
+#contactTitle {
+  grid-area: contactTitle; 
+}
+#contactContent {
+  grid-area: contactContent;
+  padding-left: 2rem;
+}
+#contactForm {
+  grid-area: contactForm;
+  padding-left: 2rem;
+}
+#projects {
+  grid-area: projects;
+  padding-left: 2rem;
+}
 
+.vl {
+  border-left: 4px solid var(--darkblue);
+  height: auto;
+}
+/*.page-wrapper > section {
+  border: 5px solid var(--cornflowerblue);
+}*/
+
+.protfolio-projects {
+  display: grid;
+}

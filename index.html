@@ -26,34 +26,35 @@
 
   <!-- hero banner -->
   <section class="hero-banner">
-   
+    <div class="hero-banner-overlay">
       <div>
         <h2 id="subtitle">Front-End Web Developer</h2>
       </div>
-    
+    </div>
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
     <section class="page-section" id="about">
-      <h2>About Me</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet 
-        sit amet cursus sit amet dictum sit. Arcu vitae elementum curabitur 
-        vitae nunc sed velit dignissim sodales. Sodales neque sodales ut 
-        etiam sit amet nisl purus in. Tempor orci dapibus ultrices in iaculis 
-        nunc sed augue. Sit amet consectetur adipiscing elit. Turpis nunc 
-        eget lorem dolor sed viverra ipsum nunc. Facilisis volutpat est velit 
-        egestas dui id. Ultrices eros in cursus turpis massa tincidunt dui ut 
-        ornare. 
-      </p>
+      <h2 class="titleArea" id="aboutTitle">About Me</h2>
+      
+        <p class="contentArea vl" id="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet 
+          sit amet cursus sit amet dictum sit. Arcu vitae elementum curabitur 
+          vitae nunc sed velit dignissim sodales. Sodales neque sodales ut 
+          etiam sit amet nisl purus in. Tempor orci dapibus ultrices in iaculis 
+          nunc sed augue. Sit amet consectetur adipiscing elit. Turpis nunc 
+          eget lorem dolor sed viverra ipsum nunc. Facilisis volutpat est velit 
+          egestas dui id. Ultrices eros in cursus turpis massa tincidunt dui ut 
+          ornare. 
+        </p>
+      
     </section>
-
-    <!-- portfolio container -->
+     <!-- portfolio container -->
     <section class="workPortfolio" id="work">
-      <h2>Work</h2>
-      <div class="portfolio-projects" id="projects"> <!-- css grid container -->
+      <h2 class="titleArea" id="workTitle">Work</h2>
+      <div class="titleArea portfolio-projects vl" id="projects"> <!-- css grid container -->
         <div class="firstRow wrapper"> <!-- flexbox container -->
           <div id="project1" class="portfolio-item"> <!-- flex item 1 -->
 
@@ -81,8 +82,8 @@
 
     <!-- contact -->
     <section class="page-section contact" id="contact">
-      <h2>Get in Touch</h2>
-      <p>
+      <h2 class= "titleArea" id="contactTitle">Get in Touch</h2>
+      <p class= "contentArea vl" id="contactContent">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Laoreet sit amet cursus sit amet dictum sit. Arcu vitae elementum 
@@ -90,7 +91,7 @@
         sodales ut etiam sit amet nisl purus in.
       </p>
       <!-- contact form -->
-      <form>
+      <form class="contentArea" id="contactForm">
         <label for="fname">First Name: </label>
           <input type="text" id="fname" class="contact-form-field">
           <label for="lname">Last Name: </label>
@@ -102,9 +103,8 @@
           <input type="submit" value="Send" class="send-button">
       </form>
     </section>
-  </main>
+</main>
 </body>
-
 <footer>
         <p>
             &copy; Ndidiamaka Siokwu 2022
