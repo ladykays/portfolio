@@ -7,9 +7,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif; /*'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
   line-height: 1.5;
   background-color: #d1d3d5;
+  color: var(--gray);
 }
 
 h1,
@@ -34,6 +35,7 @@ a {
   --darkblue: #002080;
   --darkbluevariant: #011759;
   --cornflowerblue: #6495ed;
+  --gray: #57617c;
 }
 
 /* header section style*/
@@ -117,19 +119,29 @@ h2#subtitle {
   width: 80%;
   height:auto;
   display: grid;
-  /*grid-template-rows: 1fr 1fr 1fr;*/
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "aboutTitle content content content content"
+  /*grid-template-rows: 1fr 1fr 1fr;*/
+  /*grid-template-areas: "aboutTitle content content content profilePicture"
                        "workTitle projects projects projects projects"
-                        "contactTitle contactContent contactContent contactForm contactForm";
+                        "contactTitle contactContent contactContent contactForm contactForm";*/
   justify-items: end;
   align-items: center;
   margin: 1rem auto;
   padding: 3rem 0rem 3rem 0rem;
 
 }
+.page-section#about{
+  grid-template-areas: "aboutTitle content content content profilePicture";
+}
+.workPortfolio{
+  grid-template-areas: "workTitle projects projects projects projects";
+}
+.page-section#contact {
+  grid-template-areas: "contactTitle contactContent contactContent contactForm contactForm";
+}
 #aboutTitle, #workTitle, #contactTitle {
   padding-right: 0.5rem;
+  color: var(--gray);
 }
 #aboutTitle {
   grid-area: aboutTitle;
@@ -138,6 +150,10 @@ h2#subtitle {
   grid-area: content;
   padding-left: 2rem;
   align-items: center;
+}
+#profilePicture {
+  grid-area: profilePicture;
+  padding-left: 2rem;
 }
 #workTitle {
   grid-area: workTitle;  
@@ -163,13 +179,40 @@ h2#subtitle {
 }
 
 .vl {
-  border-left: 4px solid var(--darkblue);
+  border-left: 4px solid var(--gray);
   height: auto;
 }
-/*.page-wrapper > section {
-  border: 5px solid var(--cornflowerblue);
-}*/
-
-.protfolio-projects {
+.page-wrapper > section {
+  width: 80%;
+}
+.workPortfolio {
+  
+}
+.portfolio-projects {
   display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "project1 project1"
+  "project2 project3";
+}
+#project1 {
+  grid-area: project1;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+.firstRow {
+  width: 100%;
+  height: 200px;
+}
+.wrapper {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.port-image {
+  width: 100%;
+  height: 300px;
+}
+#showcase {
+  width: 100%;
 }
