@@ -119,8 +119,9 @@ h2#subtitle {
   width: 80%;
   height:auto;
   display: grid;
+  
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /*grid-template-rows: 1fr 1fr 1fr;*/
+  
   /*grid-template-areas: "aboutTitle content content content profilePicture"
                        "workTitle projects projects projects projects"
                         "contactTitle contactContent contactContent contactForm contactForm";*/
@@ -185,29 +186,40 @@ h2#subtitle {
 .page-wrapper > section {
   width: 80%;
 }
-.workPortfolio {
-  
-}
+/*#work {
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}*/
 .portfolio-projects {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  /*display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
+  /*grid-template-areas: 
   "project1 project1"
-  "project2 project3";
+  "project2 project3"
+  "project5 project6";*/
 }
 #project1 {
-  grid-area: project1;
+  /*grid-area: project1;*/
   background-image: url("../images/02-portfolio-4.jpg");
-}
-.firstRow {
   width: 100%;
-  height: 200px;
+}
+.heading {
+  color: #002080;
+  background-color: yellow;
 }
 .wrapper {
   width:100%;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
+  justify-content: flex-start;
+}
+.firstRow {
+  width: 100%;
+  height: 200px;
 }
 .port-image {
   width: 100%;
