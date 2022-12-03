@@ -137,8 +137,10 @@ h2#hero-subtitle {
 #workPortfolio {
   display: grid;
   width: 100%;
+  height: auto;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows:repeat(2, 180px);
+  grid-auto-rows:minmax(220px, auto);
   grid-gap: 1em;
   padding-left: 3em;
 }
@@ -156,7 +158,7 @@ h2#hero-subtitle {
   
 
 #project1{
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/01-portfolio.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -165,16 +167,16 @@ h2#hero-subtitle {
   grid-row: span 2;
 }
 #project2{
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio.png);
 }
 #project3{
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/03-portfolio.png);
 }
 #project4{
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/04-portfolio.png);
 }
 #project5{
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/05-portfolio.png);
 }
 
 /* footer section*/
