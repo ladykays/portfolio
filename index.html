@@ -23,20 +23,34 @@
 
   <!-- hero banner -->
   <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
+    <div class="hero-banner-overlay">
+      <div>
+        <h2 id="hero-subtitle">Front-End Web Developer</h2>
+      </div>
     </div>
   </section>
-
-  <main class="page-wrapper">
+  
+  <main class="page-wrapper"> <!-- parent grid container -->
     <!-- about me -->
     <section class="page-section" id="about">
-      <h2>About Me</h2>
+      <h2 class="subtitle">About <br>Me</h2>
     </section>
+    <section class="page-section" id="about-text"> <!-- grid container with two elements-->
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores ipsam ex odio similique tempore perspiciatis aliquid ab nihil enim, quo dicta iusto at itaque expedita unde cupiditate saepe veniam?
+        </p>
+        <img src="./assets/images/profile.jpg" id="profilePicture" alt="ndidiamaka">
+    </section>
+
 
     <!-- portfolio container -->
     <section class="page-section" id="work">
-      <h2>Work</h2>
+      <h2 class="subtitle">Work</h2>
+    </section>
+    <section class="page-section" id="workPortfolio">
+      <div class="portfolioItems"> <!-- grid container-->
+
+      </div>
     </section>
 
     <!-- contact -->
