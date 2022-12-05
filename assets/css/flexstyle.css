@@ -118,8 +118,9 @@ h2#hero-subtitle {
 .subtitle {
   margin-right: 10px;
   padding-right: 10px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-family: 'Arial Narrow', Arial, 
+  sans-serif, 'Franklin Gothic Medium';
+  font-size: 30px;
   border-right: 3px solid var(--gray);
   text-align: right;
   flex: 0 0 200px;
@@ -163,20 +164,33 @@ h2#hero-subtitle {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-}
-.project a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
   transition: 0.5s ease;
 }
-#project1, #project2, #project3, #project4, #project5 {
+
+#project1, 
+#project2, 
+#project3, 
+#project4, 
+#project5 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: 4px solid var(--cornflowerblue);
+  /*transition: all .5s;*/
 }
 
+/*causes a hover effect*/
+#project1:hover, 
+#project2:hover, 
+#project3:hover, 
+#project4:hover, 
+#project5:hover {
+  transform: scale(1.1); 
+}
+
+
 #project1{
-  
   background-image: url(../images/01-portfolio.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -201,9 +215,7 @@ h2#hero-subtitle {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(248, 248, 248, 0%);
-  overflow: hidden;
-  z-index: 2;
+  transition: transform .2s;
 }
 #project1-projectNameContainer{
   min-width: 20%;
@@ -341,6 +353,7 @@ footer a:link, footer a:visited {
     color: var(--gray);
     font-size: 20px;
     padding: 10px;
+    white-space: nowrap;
   }
 
 }
@@ -409,6 +422,13 @@ footer a:link, footer a:visited {
   }
   #workPortfolio {
     padding-left: 0;
+  }
+}
+
+/*For large devices*/
+@media only screen and (min-width:992px){
+  .nav-link {
+    white-space: nowrap;
   }
 }
 
