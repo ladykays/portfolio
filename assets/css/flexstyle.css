@@ -126,6 +126,12 @@ h2#hero-subtitle {
 }
 
 /* about section*/
+/* adds a line break after "About" so "Me" goes to a new line */
+#line2::before { 
+  content: "\a";
+  white-space: pre;
+}
+
 .text, .contactDetails{
   padding-left: 3em;
 }
@@ -231,7 +237,7 @@ ul{
   color: var(--gray);
   font-size: 25px;
   padding: 1rem;
-  text-decoration: underline 2px solid var(--gray);
+  text-decoration: underline 3px solid var(--gray);
   cursor: pointer;
 }
 footer a:link, footer a:visited {
@@ -271,6 +277,66 @@ footer a:link, footer a:visited {
   h2#hero-subtitle {
     margin: 0 auto 1rem auto;
   }
+  .page-wrapper {
+    width: 80%;
+    margin: 2em auto 1em auto;
+  }
+  .page-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2em;
+  }
+  .subtitle {
+    margin-bottom: 2rem;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 40px;
+    border-bottom: 3px solid var(--gray);
+    border-right: 0;
+    text-align: left;
+    flex: 0;
+  }
+  
+  #line2::before { 
+    content: none;
+    white-space:inherit;
+  }
+  .text, .contactDetails{
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  #profilePicture {
+    height: auto;
+    margin-left: 0;
+  }
+
+  #workPortfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 0;
+  }
+  #project1, #project2, #project3, #project4, #project5 {
+    grid-column: span 2;
+  }
+  footer {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  
+  footer ul{
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    justify-content:space-between;
+    grid-column: span 2;
+  }
+  .footer-link {
+    color: var(--gray);
+    font-size: 20px;
+    padding: 10px;
+  }
+
 }
 
 /*For medium devices*/
