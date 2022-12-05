@@ -12,4 +12,3 @@ This repository holds the source files for the personal website of Ndidiamaka Si
 
 ## Licence
 Please refer to the LICENCE in the repo.
-
