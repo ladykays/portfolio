@@ -1,80 +1,100 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ndidiamaka Siokwu - Front-End Web Developer</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ndidiamaka Siokwu - Front-End Web Developer</title>
+  <link rel="stylesheet" href="./assets/css/flexstyle.css" />
+</head>
 
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <div class="headerContainer">
-      <h1 id="logo">Ndidiamaka Siokwu</h1>
-      <nav id="menu">
-        <ul class="header-nav">
-          <li><a href="#" class="nav-link">Projects</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
-          <li><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-  </div>
-  </header>
+<!-- main logo / nav -->
+<header>
+  <div class="headerContainer">
+    <h1 id="logo">Ndidiamaka Siokwu</h1>
+    <nav id="menu">
+      <ul class="header-nav">
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
+    </nav>
+</div>
+</header>
 
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div class="hero-banner-overlay">
-      <div>
-        <h2 id="hero-subtitle">Front-End Web Developer</h2>
+<!-- hero banner -->
+<section class="hero-banner">
+  <div class="hero-banner-overlay">
+    <div>
+      <h2 id="hero-subtitle">Front-End Web Developer</h2>
+    </div>
+  </div>
+</section>
+
+<main class="page-wrapper"> 
+  <!-- about me -->
+    <section class="page-section" id="about"> <!-- flex container -->
+      <h2 class="subtitle"><span id="line1">About</span><span id="line2"> Me</span></h2>
+      <p class="text">
+        Hello, My name is Ndidiamaka Siokwu. You can call me Kerrion as I know how difficult it could be to pronounce my name. My interest is in web development and I am currently studying to become a web developer. 
+      </p>
+      <img src="./assets/images/profile.png" id="profilePicture" alt="ndidiamaka">      
+    </section>
+  
+  <!-- portfolio container -->
+  <section class="page-section" id="work"> <!-- flex container -->
+    <h2 class="subtitle">Work</h2>
+    <div class="portfolioItems" id="workPortfolio">   <!-- grid container -->
+      <div class="project" id="project1">
+        <a href="https://ladykays.github.io/furniture/" target="_blank" class="project-link"></a>
+        <div class="projectNameContainer" id="project1-projectNameContainer">
+          <h3  class="projectName" >Furniture</h3>
+          <div class="techUsed">HTML and CSS</div>
+        </div>
+      </div>
+      <div class="project" id="project2">
+        <a href="https://ladykays.github.io/css-snippet-cheetsheet/" target="_blank" class="project-link"></a>
+        <div class="projectNameContainer">
+          <h3  class="projectName" >CSS Cheatsheet</h3>
+          <div class="techUsed">HTML and CSS</div>
+        </div>
+      </div>
+      <div class="project" id="project3">
+        <a href="https://ladykays.github.io/jakes-eatery/" target="_blank" class="project-link"></a>
+        <div class="projectNameContainer">
+          <h3  class="projectName" >Jake's Eatery</h3>
+          <div class="techUsed">HTML and CSS</div>
+        </div>
+      </div>
+      <div class="project" id="project4">
+        <a href="https://ladykays.github.io/horiseon-code-refactor/" target="_blank" class="project-link"></a>
+        <div class="projectNameContainer">
+          <h3  class="projectName" >Horiseon</h3>
+          <div class="techUsed">HTML and CSS</div>
+        </div>
+      </div>
+      <div class="project" id="project5">
+        <a href="https://ladykays.github.io/mini-project-landing-page/" target="_blank" class="project-link"></a>
+        <div class="projectNameContainer">
+          <h3  class="projectName" >Landing Page</h3>
+          <div class="techUsed">HTML and CSS</div>
+        </div>
       </div>
     </div>
   </section>
-  
-  <main class="page-wrapper"> <!-- parent grid container -->
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2 class="subtitle">About <br>Me</h2>
-    </section>
-    <section class="page-section" id="about-text"> <!-- grid container with two elements-->
-        <p class="text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores ipsam ex odio similique tempore perspiciatis aliquid ab nihil enim, quo dicta iusto at itaque expedita unde cupiditate saepe veniam?
-        </p>
-        <img src="./assets/images/profile.jpg" id="profilePicture" alt="ndidiamaka">
-    </section>
 
-
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2 class="subtitle">Work</h2>
-    </section>
-    <section class="page-section portfolioItems" id="workPortfolio"> <!-- grid container-->
-      <div class="project" id="project1">
-        <h3  class="projectName" >Furniture</h3>
-        <div class="techUsed">HTML and CSS</div>
-      </div>
-      <div class="project" id="project2">
-        <h3  class="projectName" >Furniture</h3>
-        <div class="techUsed">HTML and CSS</div>
-      </div>
-      <div class="project" id="project3">
-        <h3  class="projectName" >Furniture</h3>
-        <div class="techUsed">HTML and CSS</div>
-      </div>
-      <div class="project" id="project4">
-        <h3  class="projectName" >Furniture</h3>
-        <div class="techUsed">HTML and CSS</div>
-      </div>
-      <div class="project" id="project5">
-        <h3  class="projectName" >Furniture</h3>
-        <div class="techUsed">HTML and CSS</div>
-      </div>
-    </section>
-
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
+  <!-- contact -->
+  <footer class="page-section contact" id="contact">
+    <h2 class="subtitle"><span id="line1">Contact</span><span id="line2"> Me</span></h2>
+    <div class="contactDetails">
+      <ul>
+        <li class="footer-link">887 367 3546</li>
+        <li class="footer-link">ladykerrion@sky.com</li>
+        <li class="footer-link"><a href="https://github.com/ladykays">Github</a> </li>
+        <li class="footer-link"><a href="#">Linkden</a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
 </body>
 
 </html>

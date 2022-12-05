@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  width: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -48,8 +50,9 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
-  ul {
+  .header-nav {
     list-style: none;
     display: flex;
     width: 100%;
@@ -61,8 +64,9 @@ a {
    padding: 0 1rem 0 5rem;
    font-size: 3rem;
    color: var(--darkbluevariant);
+   white-space: nowrap;
   }
-  #menu {
+  nav#menu {
     margin: auto 0;
     padding: 0 5rem 0 1rem;
   }
@@ -70,7 +74,7 @@ a {
     color: var(--cornflowerblue);
     font-size: 24px;
     padding: 1rem;
-    text-decoration: underline;
+    text-decoration: underline 3px solid var(--cornflowerblue);
   }
   .nav-link:hover {
     color: rgb(100, 148, 237, 0.6);
@@ -79,19 +83,19 @@ a {
     /* hero banner style*/
 .hero-banner {
   width: 100%;
-  height: 12rem;
+  height: 20rem;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-image: url(../images/02-hero-bg.jpg);
 }
 .hero-banner-overlay {  /* adds a transparent overlay to the background image */
   width: 100%;
-  height: 12rem;
+  height: 20rem;
   background-color: rgb(100, 149, 237, 0.4);
   display: flex;
   justify-content: flex-end; /* aligns the h2 text to the top right */
   align-items: flex-end;  /* aligns the h2 text to the bottom right */
-
 }
 h2#hero-subtitle {
   margin: 0 5rem 1rem 0;
@@ -103,91 +107,329 @@ h2#hero-subtitle {
 
 /* main styles*/
 .page-wrapper {
-  width: 100%;
+  width: 80%;
   margin: 2em auto 1em auto;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-auto-rows: minmax(200px, auto);
-  grid-gap: 1em;
-  justify-items: end;
-  align-items: start;
 }
-
+.page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 2em;
+}
 .subtitle {
+  margin-right: 10px;
+  padding-right: 10px;
+  font-family: 'Arial Narrow', Arial, 
+  sans-serif, 'Franklin Gothic Medium';
+  font-size: 30px;
+  border-right: 3px solid var(--gray);
   text-align: right;
+  flex: 0 0 200px;
 }
 
+/* about section*/
+/* adds a line break after "About" so "Me" goes to a new line */
+#line2::before { 
+  content: "\a";
+  white-space: pre;
+}
 
-/* about section */
-section#about-text {
-  border-left: 5px solid var(--darkbluevariant);
-  padding-left: 2em;
+.text, .contactDetails{
+  padding-left: 3em;
+}
+
+#profilePicture {
+  margin-left: 3em;
+  border: 3px solid var(--cornflowerblue);
+  height: 150px;
+}
+
+/* portfolio section */
+
+#workPortfolio {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-column-gap: 1em;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:repeat(2, 180px);
+  grid-auto-rows:minmax(150px, auto);
+  grid-auto-columns: minmax(auto, 80%);
+  grid-gap: 1em;
+  padding-left: 3em;
 }
-
-/* work section */
-section.portfolioItems {
-  border-left: 5px solid var(--darkbluevariant);
-  padding-left: 2em;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-auto-columns: 100%;
-  grid-column-gap: 1em;
-}
-
-.portfolioItems > div {
-  border: 2px #011759 solid;
-}
-.project1 {
+.project {
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: start;
-}
-#project1{
-  background-image: url(../images/01-portfolio.png);
-  grid-column:1/3;
-  grid-row: 1/3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: 0.5s ease;
 }
 
+#project1, 
+#project2, 
+#project3, 
+#project4, 
+#project5 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid var(--cornflowerblue);
+  /*transition: all .5s;*/
+}
+
+/*causes a hover effect*/
+#project1:hover, 
+#project2:hover, 
+#project3:hover, 
+#project4:hover, 
+#project5:hover {
+  transform: scale(1.1); 
+}
+
+
+#project1{
+  background-image: url(../images/01-portfolio.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid var(--cornflowerblue);
+  grid-column: span 2; /* causes item to span 2 columns */
+  grid-row: span 2; /* causes item to sapn 2 rows */
+}
 #project2{
   background-image: url(../images/02-portfolio.png);
 }
-
-#project3 {
+#project3{
   background-image: url(../images/03-portfolio.png);
 }
-
-#project4 {
+#project4{
   background-image: url(../images/04-portfolio.png);
 }
-
 #project5{
   background-image: url(../images/05-portfolio.png);
 }
+.project-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: transform .2s;
+}
+#project1-projectNameContainer{
+  min-width: 20%;
+}
+.projectNameContainer{
+  background-color: var(--cornflowerblue);
+  padding: 10px;
+  min-width: 30%;
+  margin-bottom: 20px;
+  color: var(--darkbluevariant);
+  align-self: flex-end;
+}
 .projectName {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .techUsed {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
-.page-wrapper > .page-section{
+/* footer section*/
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-link {
+  color: var(--gray);
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-decoration: underline 3px solid var(--gray);
+  cursor: pointer;
+
+}
+.contactDetails {
+  width: 100%;
+}
+footer a:link, footer a:visited {
+  color: inherit;
+}
+.footer-link:hover {
+  color: var(--cornflowerblue);
+}
+
+/* Media Queries */
+/*For small devices*/
+@media only screen and (min-width:0px) and (max-width: 768px) {
+  .headerContainer{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header-nav {
+    align-content: center;
+  }
+  h1#logo {
+   width: 100%;
+   height: 5rem;
+   margin: 0;
+   font-size: 2.5rem;
+   text-align: center;
+   padding: 10px 0 10px 0; 
+  }
+  nav#menu {
+    margin: auto 0;
+    padding: 0;
+  }
+  .hero-banner-overlay {  
+    justify-content: center;
+  }
+  h2#hero-subtitle {
+    margin: 0 auto 1rem auto;
+  }
+  .page-wrapper {
+    width: 80%;
+    margin: 2em auto 1em auto;
+  }
+  .page-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2em;
+  }
+  .subtitle {
+    margin-bottom: 2rem;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 40px;
+    border-bottom: 3px solid var(--gray);
+    border-right: 0;
+    text-align: left;
+    flex: 0;
+  }
+  
+  #line2::before { 
+    content: none;
+    white-space:inherit;
+  }
+  .text, .contactDetails{
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  #profilePicture {
+    height: auto;
+    margin-left: 0;
+  }
+
+  #workPortfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 0;
+  }
+  #project1, #project2, #project3, #project4, #project5 {
+    grid-column: span 2;
+  }
+  footer {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  
+  footer ul{
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    justify-content:space-between;
+    grid-column: span 2;
+  }
+  .footer-link {
+    color: var(--gray);
+    font-size: 20px;
+    padding: 10px;
+    white-space: nowrap;
+  }
 
 }
 
-.nested {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr auto auto auto);
-  grid-auto-rows: 70px;
-  grid-gap: 1em;
+/*For medium devices*/
+@media only screen and (min-width:768px) and (max-width: 992px) {
+  .headerContainer{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header-nav {
+    align-content: center;
+  }
+  h1#logo {
+   width: 100%;
+   height: 5rem;
+   margin: 0;
+   font-size: 2.5rem;
+   text-align: center;
+   padding: 10px 0 10px 0; 
+  }
+  nav#menu {
+    margin: auto 0;
+    padding: 0;
+  }
+  .hero-banner-overlay {  
+    justify-content: center;
+  }
+  h2#hero-subtitle {
+    margin: 0 auto 1rem auto;
+  }
+  .page-wrapper {
+    width: 80%;
+    margin: 2em auto 1em auto;
+  }
+  .page-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2em;
+  }
+  .subtitle {
+    margin-bottom: 2rem;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 40px;
+    border-bottom: 3px solid var(--gray);
+    border-right: 0;
+    text-align: left;
+    flex: 0;
+  }
+  
+  #line2::before { 
+    content: none;
+    white-space:inherit;
+  }
+  .text, .contactDetails{
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  #profilePicture {
+    height: auto;
+    margin-left: 0;
+  }
+  #workPortfolio {
+    padding-left: 0;
+  }
 }
 
-.nested > div {
-  border: #333 1px solid;
-  padding: 1em;
+/*For large devices*/
+@media only screen and (min-width:992px){
+  .nav-link {
+    white-space: nowrap;
+  }
 }
+
